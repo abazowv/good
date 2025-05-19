@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="458.0" prefWidth="525.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.autos.LoginController">
+  <children>
+
+    <Label layoutX="216.0" layoutY="108.0" text="Sign in">
+      <font>
+        <Font name="Arial" size="28.0" />
+      </font>
+    </Label>
+
+    <!-- Метка для имени пользователя -->
+    <Label layoutX="126.0" layoutY="179.0" prefHeight="26.0" prefWidth="90.0" text="Username">
+      <font>
+        <Font name="Arial" size="18.0" />
+      </font>
+    </Label>
+
+    <!-- Поле для ввода имени пользователя -->
+    <TextField fx:id="NameTb" layoutX="235.0" layoutY="179.0" />
+
+    <!-- Метка для пароля -->
+    <Label layoutX="126.0" layoutY="240.0" text="Password">
+      <font>
+        <Font name="Arial" size="18.0" />
+      </font>
+    </Label>
+
+    <!-- Поле для ввода пароля -->
+    <PasswordField fx:id="PasswordTb" layoutX="235.0" layoutY="238.0" />
+
+    <!-- Комбобокс для выбора роли -->
+    <ComboBox fx:id="RoleCmb" layoutX="144.0" layoutY="291.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Director" />
+          <String fx:value="Seller" />
+          <String fx:value="Mechanic" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+
+
+    <!-- Кнопка для входа -->
+    <Button fx:id="SigninBtn" layoutX="285.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleSignInButtonAction" prefHeight="26.0" prefWidth="90.0" text="Sign in" />
+  </children>
+</AnchorPane>
